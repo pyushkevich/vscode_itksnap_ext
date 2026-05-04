@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="18" fill="#1a2a3a"/>
+
+  <!-- Crosshair ring -->
+  <circle cx="64" cy="64" r="38" fill="none" stroke="#4a9fd4" stroke-width="4"/>
+
+  <!-- Crosshair lines -->
+  <line x1="64" y1="18" x2="64" y2="42" stroke="#4a9fd4" stroke-width="3" stroke-linecap="round"/>
+  <line x1="64" y1="86" x2="64" y2="110" stroke="#4a9fd4" stroke-width="3" stroke-linecap="round"/>
+  <line x1="18" y1="64" x2="42" y2="64" stroke="#4a9fd4" stroke-width="3" stroke-linecap="round"/>
+  <line x1="86" y1="64" x2="110" y2="64" stroke="#4a9fd4" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Center dot -->
+  <circle cx="64" cy="64" r="6" fill="#e05a2b"/>
+
+  <!-- Segmentation arc (orange, partial) -->
+  <path d="M 64 26 A 38 38 0 0 1 102 64" fill="none" stroke="#e05a2b" stroke-width="4" stroke-linecap="round"/>
+</svg>

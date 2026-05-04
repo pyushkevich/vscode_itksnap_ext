@@ -1,0 +1,35 @@
+{
+  "name": "itksnap-launcher",
+  "displayName": "ITK-SNAP Launcher",
+  "description": "Open .itksnap workspace and NIfTI image files in ITK-SNAP from the VS Code Explorer, including files on remote SSH servers.",
+  "version": "0.0.1",
+  "publisher": "itksnap",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyushkevich/vscode_itksnap_ext"
+  },
+  "icon": "icon.png",
+  "categories": ["Other"],
+  "keywords": ["itksnap", "nifti", "medical imaging", "remote", "ssh"],
+  "engines": { "vscode": "^1.75.0" },
+  "extensionKind": ["ui"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "itksnap.open",
+        "title": "Open in ITK-SNAP"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .itksnap || resourceExtname == .nii || resourceFilename =~ /\\.nii\\.gz$/",
+          "command": "itksnap.open",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}
