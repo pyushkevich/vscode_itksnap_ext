@@ -22,6 +22,11 @@ and loads the file over SSH.
 For local files the plain `file://` URI is passed directly, opening via the
 normal `.itksnap` / `.nii` file-type association.
 
+`.itksnap` workspace files open in VS Code's normal XML text editor (they
+are plain XML). An **Open in ITK-SNAP** button (external-link icon) appears
+in the editor title bar whenever a `.itksnap` file is the active editor, so
+you don't have to switch back to the Explorer to launch it.
+
 Opening a supported medical image file directly in the editor area
 (double-click, not right-click) shows a simple preview pane with the
 filename and an **Open in ITK-SNAP** button, instead of VS Code's "file is

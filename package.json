@@ -19,13 +19,21 @@
     "commands": [
       {
         "command": "itksnap.open",
-        "title": "Open in ITK-SNAP"
+        "title": "Open in ITK-SNAP",
+        "icon": "$(link-external)"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "when": "resourceExtname == .itksnap || resourceExtname == .nii || resourceExtname == .dcm || resourceExtname == .ge4 || resourceExtname == .ge5 || resourceExtname == .gipl || resourceExtname == .mha || resourceExtname == .mhd || resourceExtname == .mnc || resourceExtname == .nia || resourceExtname == .nrrd || resourceExtname == .nhdr || resourceExtname == .ima || resourceExtname == .cub || resourceExtname == .vtk || resourceExtname == .vti || resourceFilename =~ /\\.(nii|gipl|nia|cub)\\.gz$/",
+          "command": "itksnap.open",
+          "group": "navigation"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "resourceExtname == .itksnap",
           "command": "itksnap.open",
           "group": "navigation"
         }
