@@ -4,6 +4,8 @@ Adds an **"Open in ITK-SNAP"** context menu item to `.itksnap` workspace files
 and NIfTI images (`.nii`, `.nii.gz`) in the VS Code Explorer.  Works for both
 local files and files on **Remote SSH** servers.
 
+** THIS EXTENSION REQUIRES ITK-SNAP 4.6 OR LATER **
+
 ## How it works
 
 Right-clicking a supported file and choosing **Open in ITK-SNAP** constructs an
