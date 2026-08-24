@@ -1,8 +1,13 @@
 # ITK-SNAP Launcher — VS Code Extension
 
 Adds an **"Open in ITK-SNAP"** context menu item to `.itksnap` workspace files
-and NIfTI images (`.nii`, `.nii.gz`) in the VS Code Explorer.  Works for both
-local files and files on **Remote SSH** servers.
+and medical image files in the VS Code Explorer, covering the formats
+ITK-SNAP itself supports: NIfTI (`.nii`, `.nii.gz`, `.nia`, `.nia.gz`),
+MetaImage (`.mha`, `.mhd`), NRRD (`.nrrd`, `.nhdr`), GIPL (`.gipl`,
+`.gipl.gz`), MINC (`.mnc`), VoxBo CUB (`.cub`, `.cub.gz`), VTK Image
+(`.vtk`, `.vti`), single DICOM images (`.dcm`), Siemens Vision (`.ima`), and
+GE (`.ge4`, `.ge5`). Works for both local files and files on **Remote SSH**
+servers.
 
 ** THIS EXTENSION REQUIRES ITK-SNAP 4.6 OR LATER **
 
@@ -16,6 +21,22 @@ and loads the file over SSH.
 
 For local files the plain `file://` URI is passed directly, opening via the
 normal `.itksnap` / `.nii` file-type association.
+
+Opening a supported medical image file directly in the editor area
+(double-click, not right-click) shows a simple preview pane with the
+filename and an **Open in ITK-SNAP** button, instead of VS Code's "file is
+not displayed" binary placeholder. It does not read or parse the image
+data.
+
+> **Note:** If you have another medical-image-viewer extension installed,
+> VS Code will prompt you once to pick a default editor for a given
+> extension (e.g. `*.nii.gz`). You can change this choice later via
+> **Reopen Editor With...** from the editor tab context menu, or by editing
+> the `workbench.editorAssociations` setting.
+
+Note that `.hdr`, `.img`, and `.raw` (Analyze / raw binary formats) are
+intentionally left out of both the context menu and the editor preview,
+since those extensions are also used outside of medical imaging.
 
 ## Prerequisites
 
