@@ -15,9 +15,8 @@ servers.
 
 Right-clicking a supported file and choosing **Open in ITK-SNAP** constructs an
 `itksnap-sftp://hostname/path` URL and hands it to the local machine via
-`vscode.env.openExternal`.  macOS routes the `itksnap-sftp://` scheme to
-ITK-SNAP, which strips the `itksnap-` prefix to obtain `sftp://hostname/path`
-and loads the file over SSH.
+`vscode.env.openExternal`.  On Windows and MacOS the `itksnap-sftp://` scheme
+routes to ITK-SNAP, which loads the file over SSH.
 
 For local files the plain `file://` URI is passed directly, opening via the
 normal `.itksnap` / `.nii` file-type association.
@@ -45,14 +44,14 @@ since those extensions are also used outside of medical imaging.
 
 ## Prerequisites
 
-- **macOS** with ITK-SNAP installed.  The `itksnap-sftp://` URL scheme is
+- ITK-SNAP 4.6 or later installed.  The `itksnap-sftp://` URL scheme is
   registered automatically the first time ITK-SNAP is launched.
 - An SSH host alias in `~/.ssh/config` that matches the VS Code Remote SSH
   connection name.
 
 ## Installation
 
-Install once on your local Mac — no installation needed on the remote server.
+Install once on your local machine — no installation needed on the remote server.
 
 ```bash
 cd /path/to/vscode_ext

@@ -1,8 +1,8 @@
 {
   "name": "itksnap-launcher",
   "displayName": "ITK-SNAP Launcher",
-  "description": "Open .itksnap workspace and NIfTI image files in ITK-SNAP from the VS Code Explorer, including files on remote SSH servers.",
-  "version": "0.0.5",
+  "description": "Open medical image files and .itksnap workspaces in ITK-SNAP from the VS Code Explorer, including files on remote SSH servers.",
+  "version": "0.0.6",
   "publisher": "pyushkevich",
   "license": "GPL-3.0-only",
   "repository": {
